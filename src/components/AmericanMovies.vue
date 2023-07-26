@@ -1,5 +1,5 @@
 <template>
-    <h1>Films Américains </h1>
+    <h1 class="m-5">Films Américains </h1>
     <MovieList v-bind:movies="americanMovies" />
    
 </template>
@@ -29,7 +29,7 @@ data() { // les variables disponibles dans mon composant
     //code déclenché avant la génération du template par vue
     //c'est ici que je vais lancer mon appel API
     //adresse de l'api/ version/ mot clé          / clé API                               / options:francais + popularité décr. +page1
-    axios.get("https://api.themoviedb.org/3/discover/movie/?api_key=2ee39f0fde7b77c58f1f3b6aaf0568f0&language=fr&certification_country=us&sort_buy_primary_release_date.desc&page=1")
+    axios.get("https://api.themoviedb.org/3/discover/movie/?api_key=2ee39f0fde7b77c58f1f3b6aaf0568f0&language=fr&certification_country=us&sort_by_primary_release_date.desc&page=1")
       // .then => quand l'appel API a réussi, renvoie un résultat
       // .then prend en paramètre une fonction fléchée anonyme . response = réponse de l'API
       .then(response => {

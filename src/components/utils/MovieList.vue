@@ -7,9 +7,9 @@
             <!--boucle v-for qui va parcourir les films à afficher-->
             <!--v-bind:key="movie.id" : identiifant de chaque film-->
             <!--v-bind permet d'injecter une variable en tant que valeur d'un attribut-->
-            <div v-for="movie in movies" v-bind:key="movie.id" class="col-sm-6 col-md-4 col-lg-3">
+            <div v-for="(movie, index) in movies" v-bind:key="movie.id" class="col-sm-6 col-md-4 col-lg-3">
                 <!-- v-bind : prop attendue = valeur (mon alias v-for)-->
-                <MovieCard v-bind:movie = "movie"/>
+                <MovieCard v-bind:movie = "movie" :index="index"/>
                 
             </div>
         </div>

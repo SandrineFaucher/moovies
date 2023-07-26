@@ -1,5 +1,5 @@
 <template>
-    <h1>Films Français</h1>
+    <h1 class="m-5">Films Français</h1>
     <MovieList v-bind:movies="frenchMovies" />
 </template>
 

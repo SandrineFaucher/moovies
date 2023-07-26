@@ -24,9 +24,9 @@
     </div>
 
     <!--Si la route est différente j'affiche le templete du composant concerné-->
-    <div v-else>
+    <!-- <div v-else> -->
       <RouterView :key="$route.fullPath"></RouterView>
-    </div>
+    <!-- </div> -->
 
     <FooterApp />
   </div>
@@ -67,7 +67,7 @@ export default {
       })
       // Dans le cas ou l'appel API échoue 
       .catch(() => this.error = true)
-  }
+  },
 }
 
 

@@ -1,7 +1,12 @@
 <template>
+
+<h3  v-if="$route.path == '/Top50Movies'" class="m-3">
+<span v-once>#{{ index +1 }}</span>
+</h3> 
     <div class="card">
         <img v-bind:src="urlDeBase + movie.poster_path" class="card-img-top" alt="...">
         <div class="card-body">
+            
             <h5 class="card-title">{{ movie.title }}</h5>
             <p class="card-text">{{ movie.overview.substring(0, 200) + "..." }}</p>
             <p>Note moyenne : {{ movie.vote_average }}</p>
@@ -21,6 +26,6 @@ export default {
         }
     },
 
-    props : ['movie']
+    props : ['movie', 'index']
 }
 </script>

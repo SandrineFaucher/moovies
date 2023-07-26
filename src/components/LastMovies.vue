@@ -1,5 +1,5 @@
 <template>
-    <h1>Derniers films</h1>
+    <h1>En salle cette année</h1>
     <MovieList v-bind:movies="lastMovies" />
 </template>
 
@@ -27,7 +27,7 @@ export default{
         //code déclenché avant la génération du template par vue
         //c'est ici que je vais lancer mon appel API
         //adresse de l'api/ version/ mot clé          / clé API                               / options:francais + popularité décr. +page1
-        axios.get("https://api.themoviedb.org/3/discover/movie/?api_key=2ee39f0fde7b77c58f1f3b6aaf0568f0&language=fr&sort_buy_primary_release_date=2023&page=1")
+        axios.get("https://api.themoviedb.org/3/discover/movie/?api_key=2ee39f0fde7b77c58f1f3b6aaf0568f0&language=fr&primary_release_year=2023&page=1")
 
             // .then => quand l'appel API a réussi, renvoie un résultat
             // .then prend en paramètre une fonction fléchée anonyme . response = réponse de l'API
