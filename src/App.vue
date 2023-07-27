@@ -5,7 +5,7 @@
     <!--Si la route est racine du site -->
     <div v-if="$route.path == '/'">
       <!--j'affiche le titre de l'accueil et sa selection de film -->
-      <h1>
+      <h1 class="m-5">
         Vos films préférés sont sur Moovies !
       </h1>
 
@@ -80,10 +80,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #fbfcfd;
+  color: #fbfcfd !important;
   margin-top: 60px;
 }
 h1{
   font-family: 'Big Shoulders Inline Text', cursive;
+}
+a {
+  text-decoration: none !important;
+  /* color: inherit !important */
 }
 </style>

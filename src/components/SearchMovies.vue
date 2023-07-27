@@ -1,5 +1,5 @@
 <template>
-    <h1>Rechercher un film</h1>
+    <h1 class="m-5">Rechercher un film</h1>
 </template>
 
 <script>

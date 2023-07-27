@@ -5,7 +5,7 @@ import App from "./App"
 import AmericanMovies from "./components/AmericanMovies";
 import FrenchMovies from "./components/FrenchMovies";
 import LastMovies from "./components/LastMovies";
-import MoviesDetails from "./components/MoviesDetails";
+import MovieDetails from "./components/MovieDetails";
 import SearchMovies from "./components/SearchMovies";
 import Top50Movies from "./components/Top50Movies";
 
@@ -27,8 +27,8 @@ const routes = [ // on déclare les routes
         component: LastMovies 
     },
     {
-        path: '/MoviesDetails', 
-        component: MoviesDetails 
+        path: '/MovieDetails/:id', 
+        component: MovieDetails 
     },
     {
         path: '/SearchMovies', 

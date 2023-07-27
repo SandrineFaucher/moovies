@@ -1,5 +1,5 @@
 <template>
-    <h1>En salle cette année</h1>
+    <h1 class="m-5" >En salle cette année</h1>
     <MovieList v-bind:movies="lastMovies" />
 </template>
 

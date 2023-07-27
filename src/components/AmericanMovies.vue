@@ -5,10 +5,12 @@
 </template>
 
 <script>
-import MovieList from './utils/MovieList'
+import MovieList from './utils/MovieList';
 
 //import d'axios pour pouvoir faire les appels API
 import axios from 'axios';
+
+
 
 export default{
     name : "AmericanMovies",
