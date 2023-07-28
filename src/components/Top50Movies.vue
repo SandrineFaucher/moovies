@@ -1,5 +1,5 @@
 <template>
-    <h1 class="m-5">Films les mieux notés</h1>
+    <h1 class="m-5">Les meilleurs films</h1>
 
     <MovieList v-bind:movies="top50Movies" />
 

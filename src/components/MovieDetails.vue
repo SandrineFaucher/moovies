@@ -22,7 +22,7 @@
                 <p>Note moyenne : {{ Math.ceil(movieDetails.vote_average) }}</p>
                 <p>Date de sortie : {{ formatDate(movieDetails.release_date) }}</p>
                 <p>Genres :
-                    <span v-for="genre in movieDetails.genres" :key="genre.id" class="badge bg-secondary">{{ genre.name
+                    <span v-for="genre in movieDetails.genres" :key="genre.id" class="badge bg-secondary m-3 fs-5">{{ genre.name
                     }}</span>
                 </p>
                 <div class="mt-5" id="trailer" v-if="video[0]">

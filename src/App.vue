@@ -81,7 +81,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #fbfcfd !important;
-  margin-top: 60px;
+  margin-top: 150px;
 }
 h1{
   font-family: 'Big Shoulders Inline Text', cursive;
