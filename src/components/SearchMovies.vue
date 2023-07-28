@@ -1,13 +1,15 @@
 <template>
     <h1 class="m-5">Rechercher un film</h1>
-
+    <SortButtons :movies="movies"/>
     <input class="form-control m-5 w-50 mx-auto" v-model="query" @keyup="searchMovies()">
+
     <MovieList :movies="movies" />
 
 </template>
 
 <script>
 import MovieList from './utils/MovieList.vue';
+import SortButtons from './utils/SortButtons';
 
 //import d'axios pour pouvoir faire les appels API
 import axios from 'axios';
@@ -18,7 +20,7 @@ export default {
     name: "SearchMovies",
 
     components: {
-        MovieList
+        MovieList, SortButtons,
     },
 
     data() {

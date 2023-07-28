@@ -1,5 +1,6 @@
 <template>
     <h1 class="m-5">Les meilleurs films</h1>
+    <SortButtons :movies="top50Movies"/>
 
     <MovieList v-bind:movies="top50Movies" />
 
@@ -7,7 +8,7 @@
 
 <script>
 import MovieList from './utils/MovieList'
-
+import SortButtons from './utils/SortButtons';
 
 //import d'axios pour pouvoir faire les appels API
 import axios from 'axios';
@@ -15,7 +16,7 @@ import axios from 'axios';
 export default {
     name: "Top50Movies",
     components: {
-        MovieList, 
+        MovieList, SortButtons,
     },
 
     data() { // les variables disponibles dans mon composant

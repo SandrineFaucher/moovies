@@ -3,7 +3,7 @@
     <div class="container-fluid ">
         <div class="row">
 
-            <div class="card  col-md-6 h-25 mr-2 p-3">
+            <div class="card col-md-6 h-25 mr-2 p-3">
                 <img v-bind:src="urlDeBase + movieDetails.poster_path" class="card-img-top" alt="immagefilm">
             </div>
 
@@ -18,7 +18,7 @@
                     Langue originale : Français</p>
 
                 <p class="fs-3 m-5"><strong>{{ movieDetails.tagline }}</strong></p>
-                <p class="card-text fs-5 text-start">{{ movieDetails.overview }}</p>
+                <p class="card-text fs-5 text-start m-4">{{ movieDetails.overview }}</p>
                 <p>Note moyenne : {{ Math.ceil(movieDetails.vote_average) }}</p>
                 <p>Date de sortie : {{ formatDate(movieDetails.release_date) }}</p>
                 <p>Genres :

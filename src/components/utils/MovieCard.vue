@@ -4,8 +4,8 @@
     </h3>
     <!-- lien qui rend la card clicable en transmettant son id en syntaxe "interoplation"-->
     <router-link class="link" v-bind:to="`/MovieDetails/${movie.id}`">
-        <div class="card">
-            <img v-bind:src="urlDeBase + movie.poster_path" class="card-img-top" alt="immagefilm">
+        <div class="card" style="height : 50 auto ">
+            <img v-bind:src="urlDeBase + movie.poster_path" class="card-img-top ratio ratio-1x1" alt="immagefilm">
             <div class="card-body">
 
                 <h5 class="card-title">{{ movie.title }}</h5>

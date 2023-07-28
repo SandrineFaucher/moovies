@@ -9,6 +9,10 @@
         Vos films préférés sont sur Moovies !
       </h1>
 
+      <!--Affichage des boutons de tri via le component SortButtons-->
+        <SortButtons :movies="popularMovies"/>
+
+
       <!--en cas d'erreur de l'appel API-->
       <div v-if="error">
         <p class="bg-danger text-white p-5 fs-4"> Une erreur est survenue. Merci de recharger la page ou de réessayer
@@ -37,6 +41,7 @@
 import HeaderNav from './components/template/HeaderNav';
 import FooterApp from './components/template/FooterApp';
 import MovieList from './components/utils/MovieList';
+import SortButtons from './components/utils/SortButtons';
 
 //import d'axios pour pouvoir faire les appels API
 import axios from 'axios';
@@ -44,7 +49,7 @@ import axios from 'axios';
 export default {
   name: 'App',
   components: {
-    FooterApp, HeaderNav, MovieList
+    FooterApp, HeaderNav, MovieList, SortButtons,
   },
   data() { // les variables disponibles dans mon comosant
     return {   // la variable popularMovies va contenir les films reécupérés par l'appel API

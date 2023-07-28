@@ -1,18 +1,21 @@
 <template>
     <h1 class="m-5">Films Français</h1>
+    <SortButtons :movies="frenchMovies"/>
     <MovieList v-bind:movies="frenchMovies" />
 </template>
 
 <script>
 import MovieList from './utils/MovieList'
 
+
 //import d'axios pour pouvoir faire les appels API
 import axios from 'axios';
+import SortButtons from './utils/SortButtons';
 
 export default {
     name: "FrenchMovies",
     components: {
-        MovieList
+        MovieList, SortButtons
     },
 
     data() { // les variables disponibles dans mon composant

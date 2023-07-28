@@ -1,11 +1,13 @@
 <template>
     <h1 class="m-5">Films Américains </h1>
+    <SortButtons :movies="americanMovies"/>
     <MovieList v-bind:movies="americanMovies" />
    
 </template>
 
 <script>
 import MovieList from './utils/MovieList';
+import SortButtons from './utils/SortButtons';
 
 //import d'axios pour pouvoir faire les appels API
 import axios from 'axios';
@@ -15,7 +17,7 @@ import axios from 'axios';
 export default{
     name : "AmericanMovies",
     components :{
-        MovieList
+        MovieList, SortButtons
     },
 
 
