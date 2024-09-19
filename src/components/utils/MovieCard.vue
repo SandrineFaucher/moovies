@@ -4,7 +4,7 @@
     </h3>
     <!-- lien qui rend la card clicable en transmettant son id en syntaxe "interoplation"-->
     <router-link class="link" v-bind:to="`/MovieDetails/${movie.id}`">
-        <div class="card" style="height : 50 auto ">
+        <div class="card m-5" style="height : 50 auto ">
             <img v-bind:src="urlDeBase + movie.poster_path" class="card-img-top ratio ratio-1x1" alt="immagefilm">
             <div class="card-body">
 
@@ -33,7 +33,7 @@ export default {
 
     data() {
         return {
-            //url de bas des images de TMDB
+            //url de base des images de TMDB
             urlDeBase: "https://image.tmdb.org/t/p/original/",
         }
     },

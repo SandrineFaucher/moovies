@@ -43,7 +43,6 @@ export default {
                         this.top50Movies = this.top50Movies.concat(response.data.results)
                         //console.log(this.top50Movies);
 
-
                         //je relance un appel pour la troisième page
                         axios.get("https://api.themoviedb.org/3/discover/movie/?api_key=2ee39f0fde7b77c58f1f3b6aaf0568f0&language=fr&vote_count.gte=10000&sort_by=vote_average.desc&page=3")
                             .then(response => {

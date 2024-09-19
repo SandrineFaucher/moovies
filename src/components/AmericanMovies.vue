@@ -2,7 +2,6 @@
     <h1 class="m-5">Films Américains </h1>
     <SortButtons :movies="americanMovies"/>
     <MovieList v-bind:movies="americanMovies" />
-   
 </template>
 
 <script>

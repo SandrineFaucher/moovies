@@ -21,7 +21,7 @@ export default {
     props: ['movies'], // films à trier venant du parent 
 
     data() {
-        return { // indicateurs pour savoir si le tri ont été effectés
+        return { // indicateurs pour savoir si le tri ont été effectués
             sortedByTitle: false,
             sortedByDate: false,
             sortedByAverage: false
@@ -62,8 +62,6 @@ export default {
             } else {
                 // je tri mes films par titre dans l'ordre alphabétique inversé => tri INVERSE
                 sortMovies.sort(function (a, b) {
-
-                    //VERSION TERNAIRE OPTIMISEE    
                     if (a.title.normalize('NFD') > b.title.normalize('NFD')) return -1;
                     return a.title.normalize('NFD') < b.title.normalize('NFD') ? 1 : 0;
 

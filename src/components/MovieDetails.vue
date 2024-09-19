@@ -2,12 +2,12 @@
     <h1 class="m-5">Détail du film</h1>
     <div class="container-fluid ">
         <div class="row">
-
-            <div class="card col-md-6 h-25 mr-2 p-3">
-                <img v-bind:src="urlDeBase + movieDetails.poster_path" class="card-img-top" alt="immagefilm">
+            
+            <div class="card col-md-4 ms-5 p-3 ">
+                <img v-bind:src="urlDeBase + movieDetails.poster_path" class="card-img-top p-5" alt="immagefilm">
             </div>
-
-            <div class="card-body col-md-6 mr-2 p-3 pb-5">
+           
+            <div class="card-body col-md-4 mr-2 p-3 pb-5">
                 <h3 class="card-title fs-1 m-5">{{ movieDetails.title }}</h3>
                 <h6>Titre original : {{ movieDetails.original_title }}</h6>
 
@@ -18,7 +18,9 @@
                     Langue originale : Français</p>
 
                 <p class="fs-3 m-5"><strong>{{ movieDetails.tagline }}</strong></p>
+                <div class="col-md-6 mx-auto">
                 <p class="card-text fs-5 text-start m-4">{{ movieDetails.overview }}</p>
+                </div>
                 <p>Note moyenne : {{ Math.ceil(movieDetails.vote_average) }}</p>
                 <p>Date de sortie : {{ formatDate(movieDetails.release_date) }}</p>
                 <p>Genres :

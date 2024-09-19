@@ -12,10 +12,10 @@
       <!--Affichage des boutons de tri via le component SortButtons-->
         <SortButtons :movies="popularMovies"/>
 
-
       <!--en cas d'erreur de l'appel API-->
       <div v-if="error">
-        <p class="bg-danger text-white p-5 fs-4"> Une erreur est survenue. Merci de recharger la page ou de réessayer
+        <p class="bg-danger text-white p-5 fs-4"> Une erreur est survenue. 
+          Merci de recharger la page ou de réessayer
           ultérieurement</p>
       </div>
 
@@ -28,16 +28,15 @@
     </div>
 
     <!--Si la route est différente j'affiche le templete du composant concerné-->
-    <!-- <div v-else> -->
+     <div v-else> 
       <RouterView :key="$route.fullPath"></RouterView>
-    <!-- </div> -->
+     </div> 
 
     <FooterApp />
   </div>
 </template>
 
 <script>
-
 import HeaderNav from './components/template/HeaderNav';
 import FooterApp from './components/template/FooterApp';
 import MovieList from './components/utils/MovieList';
@@ -56,7 +55,6 @@ export default {
       popularMovies: [],
       error: false // 
     }
-
   },
   created() {
     //code déclenché avant la génération du template par vue
@@ -74,8 +72,6 @@ export default {
       .catch(() => this.error = true)
   },
 }
-
-
 </script>
 
 <style>
